@@ -10,7 +10,7 @@ const Navbar = () => {
     const [isMobile, setIsMobile] = useState(false)
 
     const tabs = [
-        { name: 'Homes', path: '/' },
+        { name: 'Home', path: '/' },
         { name: 'About', path: '/about' },
         { name: 'Services', path: '/services' },
         { name: 'Projects', path: '/projects' },
