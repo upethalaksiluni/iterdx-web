@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { useNavigate } from 'react-router-dom'
-import yathrikayaLogo from '../assets/yathrikaya-logo.jpeg'
+import yathrikayaLogo from '../assets/yathrikaya-logo.png'
 
 const launchReveal = {
     initial: { opacity: 0, y: 40, filter: 'blur(14px)' },
@@ -19,7 +19,7 @@ const LaunchingSoon = () => {
                 <motion.div className="launch-card" {...launchReveal}>
                     <div className="launch-badge">
                         <span className="launch-badge__icon">✦</span>
-                        <span>Early Access Opening Soon</span>
+                        <span>Upcoming Projects</span>
                     </div>
 
                     <h2 className="launch-title">Launching Soon</h2>
@@ -34,21 +34,21 @@ const LaunchingSoon = () => {
 
                     <div className="launch-countdown" aria-label="Launch countdown preview">
                         <div className="launch-countdown__item">
-                            <span className="launch-countdown__number">54</span>
+                            <span className="launch-countdown__number">00</span>
                             <span className="launch-countdown__label">Hours</span>
                         </div>
 
                         <span className="launch-countdown__separator">:</span>
 
                         <div className="launch-countdown__item">
-                            <span className="launch-countdown__number">47</span>
+                            <span className="launch-countdown__number">00</span>
                             <span className="launch-countdown__label">Minutes</span>
                         </div>
 
                         <span className="launch-countdown__separator">:</span>
 
                         <div className="launch-countdown__item">
-                            <span className="launch-countdown__number">34</span>
+                            <span className="launch-countdown__number">00</span>
                             <span className="launch-countdown__label">Seconds</span>
                         </div>
                     </div>

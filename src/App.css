@@ -18,17 +18,12 @@
     align-items: center;
     gap: 18px;
     z-index: 2000;
-    isolation: isolate;
 }
 
 .navbar-backdrop-box {
     position: absolute;
-    top: 12px;
-    left: var(--side-gutter);
-    right: var(--side-gutter);
-    bottom: 12px;
+    inset: 0px var(--side-gutter);
     border-radius: 28px;
-    background: rgba(255, 255, 255, 0.01);
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
     pointer-events: none;
@@ -78,7 +73,6 @@
 .nav-pill {
     background: rgba(255, 255, 255, 0.42);
     backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.62);
     padding: 6px;
     border-radius: 100px;
@@ -154,7 +148,6 @@
     border-radius: 14px;
     background: rgba(255, 255, 255, 0.82);
     backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -224,22 +217,18 @@ section {
 
 .hero-title {
     width: 100%;
-    max-width: 1100px;
-    font-size: clamp(2.7rem, 8vw, 5.2rem);
+    max-width: 1180px;
+    font-size: clamp(2.7rem, 7vw, 5rem);
     font-weight: 800;
     text-align: center;
     line-height: 0.92;
     letter-spacing: -0.06em;
-    text-wrap: balance;
     color: #03133f;
 }
 
 .hero-title__line {
     display: block;
-}
-
-.hero-title__line--and {
-    line-height: 0.9;
+    white-space: nowrap;
 }
 
 .hero-kicker {
@@ -2571,10 +2560,7 @@ section {
     }
 
     .navbar-backdrop-box {
-        top: 8px;
-        left: 12px;
-        right: 12px;
-        bottom: 8px;
+        inset: 8px 12px;
         border-radius: 24px;
     }
 
@@ -2695,18 +2681,14 @@ section {
     }
 
     .hero-title {
-        letter-spacing: -0.05em;
+        max-width: 100%;
         font-size: clamp(2.1rem, 10.5vw, 3.45rem);
         line-height: 0.96;
+        letter-spacing: -0.05em;
     }
 
-    .hero-title__line--and {
-        display: inline;
-        margin-right: 0.18em;
-    }
-
-    .hero-title__line:not(.hero-title__line--and):nth-child(3) {
-        display: inline;
+    .hero-title__line {
+        white-space: normal;
     }
 
     .hero-kicker {
@@ -3325,10 +3307,7 @@ section {
     }
 
     .navbar-backdrop-box {
-        top: 8px;
-        left: 10px;
-        right: 10px;
-        bottom: 8px;
+        inset: 8px 10px;
     }
 
     .brand-link {
@@ -3357,6 +3336,10 @@ section {
     .hero-title {
         font-size: clamp(1.95rem, 10.6vw, 2.9rem);
         letter-spacing: -0.05em;
+    }
+
+    .hero-title__line {
+        white-space: normal;
     }
 
     .hero-kicker {
@@ -3617,10 +3600,7 @@ section {
     }
 
     .navbar-backdrop-box {
-        top: 6px;
-        left: 8px;
-        right: 8px;
-        bottom: 6px;
+        inset: 6px 8px;
         border-radius: 20px;
     }
 
@@ -3656,6 +3636,10 @@ section {
         font-size: clamp(1.82rem, 10.8vw, 2.55rem);
         line-height: 0.98;
         letter-spacing: -0.05em;
+    }
+
+    .hero-title__line {
+        white-space: normal;
     }
 
     .hero-kicker {
@@ -3860,6 +3844,10 @@ section {
 
     .hero-title {
         font-size: 1.7rem;
+    }
+
+    .hero-title__line {
+        white-space: normal;
     }
 
     .launch-card {
