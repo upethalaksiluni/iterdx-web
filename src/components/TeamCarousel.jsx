@@ -144,10 +144,6 @@ function TeamCarousel() {
                     onTouchMove={handleTouchMove}
                     onTouchEnd={handleTouchEnd}
                 >
-                    <button type="button" className="team-section__nav team-section__nav--prev" onClick={goPrev} aria-label="Previous team member">
-                        ←
-                    </button>
-
                     <div className="team-section__stage">
                         {positions.map(({ member, normalized }) => {
                             let positionClass = 'team-card'
@@ -173,10 +169,6 @@ function TeamCarousel() {
                             )
                         })}
                     </div>
-
-                    <button type="button" className="team-section__nav team-section__nav--next" onClick={goNext} aria-label="Next team member">
-                        →
-                    </button>
                 </div>
 
                 <div className="team-section__dots" aria-label="Team slide navigation">

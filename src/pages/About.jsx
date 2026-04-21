@@ -55,7 +55,9 @@ const About = () => {
                             <div className="about-hero__copy">
                                 <span className="about-hero__eyebrow">IDENTITY</span>
                                 <h1 className="about-hero__title">
-                                    IterDX is a strategic consultancy and product engineering house. We serve as a professional bridge to the AI era, guiding organizations and individuals from legacy systems to stabilized, high-performance digital operations.
+                                    IterDX is a strategic bridge to the AI era.
+                                    We transform legacy systems into stabilized,
+                                    high-performance digital operations.
                                 </h1>
                             </div>
 
@@ -69,10 +71,9 @@ const About = () => {
 
             <div className="about-block middle">
                 <div className="about-shell">
-                    <h2 className="about-heading">Why IterDX: Navigating the Shift</h2>
-
-                    <div className="about-grid about-grid--content-image">
+                    <div className="about-grid about-grid--content-image about-grid--top-aligned">
                         <motion.div className="about-copy wide" {...leftReveal}>
+                            <h2 className="about-heading">Why IterDX: Navigating the Shift</h2>
                             <p className="about-paragraph">
                                 We work with businesses that know change is necessary but need a clear way forward. Our role is to simplify digital transformation into practical, structured action through automation, security, reporting, and system design.
                             </p>
@@ -81,7 +82,7 @@ const About = () => {
                             </p>
                         </motion.div>
 
-                        <motion.div className="about-image-box middle" {...imageRight}>
+                        <motion.div className="about-image-box middle about-image-box--top" {...imageRight}>
                             <img src={aboutMiddleImage} alt="IterDX consulting session" className="about-image" />
                         </motion.div>
                     </div>
@@ -90,8 +91,8 @@ const About = () => {
 
             <div className="about-block bottom">
                 <div className="about-shell">
-                    <div className="about-grid about-grid--image-content">
-                        <motion.div className="about-image-box bottom" {...imageLeft}>
+                    <div className="about-grid about-grid--image-content about-grid--top-aligned">
+                        <motion.div className="about-image-box bottom about-image-box--top" {...imageLeft}>
                             <img src={aboutBottomImage} alt="IterDX engineering collaboration" className="about-image" />
                         </motion.div>
 

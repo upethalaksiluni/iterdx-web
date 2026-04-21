@@ -19,20 +19,24 @@ function ContactPreview() {
                         +
                     </span>
 
+                    <div className="iterdx-contact-preview__line iterdx-contact-preview__line--top" aria-hidden="true" />
+                    <div className="iterdx-contact-preview__line iterdx-contact-preview__line--bottom" aria-hidden="true" />
                     <div className="iterdx-contact-preview__line iterdx-contact-preview__line--left" aria-hidden="true" />
                     <div className="iterdx-contact-preview__line iterdx-contact-preview__line--right" aria-hidden="true" />
                     <div className="iterdx-contact-preview__line iterdx-contact-preview__line--center" aria-hidden="true" />
 
                     <div className="iterdx-contact-preview__content">
-                        <h2 className="iterdx-contact-preview__title">Let your next move become your strongest digital advantage.</h2>
-                        <p className="iterdx-contact-preview__description">
-                            Talk with IterDX Global about automation, security, reporting, and scalable digital execution tailored to your business.
-                        </p>
+                        <h2 className="iterdx-contact-preview__title">Let your plans shape the future.</h2>
+                        <p className="iterdx-contact-preview__description">Start your free trial today. No credit card required.</p>
                     </div>
 
                     <div className="iterdx-contact-preview__actions">
-                        <Link to="/contact" className="iterdx-contact-preview__btn">
-                            <span>Contact Us</span>
+                        <Link to="/contact" className="iterdx-contact-preview__btn iterdx-contact-preview__btn--secondary">
+                            <span>Contact Sales</span>
+                        </Link>
+
+                        <Link to="/contact" className="iterdx-contact-preview__btn iterdx-contact-preview__btn--primary">
+                            <span>Get Started</span>
                             <span className="iterdx-contact-preview__btn-icon" aria-hidden="true">
                                 →
                             </span>
