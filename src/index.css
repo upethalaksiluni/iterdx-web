@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900;950&display=swap');
+
+:root {
+  --blue-primary: #0b3193;
+  --gold-accent: #d4a955;
+  --white: #ffffff;
+  --text-dark: #00002f;
+  --text-muted: #64748b;
+  --side-gutter: 6%;
+  --pill-item-width: 100px;
+  --nav-desktop-height: 140px;
+  --nav-tablet-height: 122px;
+  --nav-mobile-height: 84px;
+  --page-shell: min(1380px, calc(100% - 48px));
+  --site-max-width: 1380px;
+  --site-bg: radial-gradient(circle at center, #ffffff 0%, #d9e2f0 44%, #a5b4cb 100%);
+  --section-space: 56px;
+  --section-space-tablet: 40px;
+  --section-space-mobile: 28px;
+  --section-space-small-mobile: 22px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  min-width: 0;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+html {
+  font-size: 15px;
+  scroll-behavior: smooth;
+  overflow-x: clip;
+}
+
+body {
+  background: var(--site-bg);
+  background-attachment: fixed;
+  font-family: 'Inter', system-ui, sans-serif;
+  color: var(--text-dark);
+  min-height: 100vh;
+  overflow-x: clip;
+  line-height: 1.5;
+}
+
+a,
+button,
+img {
+  -webkit-tap-highlight-color: transparent;
+}
+
+img {
+  max-width: 100%;
+}
+
+button {
+  font: inherit;
+}
+
+input,
+textarea,
+button {
+  font-family: inherit;
+}
+
+#root {
+  isolation: isolate;
+}
+
+.page-shell {
+  width: var(--page-shell);
+  max-width: var(--site-max-width);
+  margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 13.5px;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 13px;
+  }
+}
