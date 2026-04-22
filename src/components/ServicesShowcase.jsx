@@ -6,13 +6,13 @@ import servicesData from '../data/servicesData'
 const contentVariants = {
     enterLeft: {
         opacity: 0,
-        x: -60,
-        filter: 'blur(10px)'
+        x: -36,
+        filter: 'blur(6px)'
     },
     enterRight: {
         opacity: 0,
-        x: 60,
-        filter: 'blur(10px)'
+        x: 36,
+        filter: 'blur(6px)'
     },
     center: {
         opacity: 1,
@@ -21,28 +21,28 @@ const contentVariants = {
     },
     exitLeft: {
         opacity: 0,
-        x: -60,
-        filter: 'blur(10px)'
+        x: -36,
+        filter: 'blur(6px)'
     },
     exitRight: {
         opacity: 0,
-        x: 60,
-        filter: 'blur(10px)'
+        x: 36,
+        filter: 'blur(6px)'
     }
 }
 
 const mediaVariants = {
     enterLeft: {
         opacity: 0,
-        x: -70,
-        scale: 0.96,
-        filter: 'blur(10px)'
+        x: -42,
+        scale: 0.985,
+        filter: 'blur(6px)'
     },
     enterRight: {
         opacity: 0,
-        x: 70,
-        scale: 0.96,
-        filter: 'blur(10px)'
+        x: 42,
+        scale: 0.985,
+        filter: 'blur(6px)'
     },
     center: {
         opacity: 1,
@@ -52,15 +52,15 @@ const mediaVariants = {
     },
     exitLeft: {
         opacity: 0,
-        x: -70,
-        scale: 0.96,
-        filter: 'blur(10px)'
+        x: -42,
+        scale: 0.985,
+        filter: 'blur(6px)'
     },
     exitRight: {
         opacity: 0,
-        x: 70,
-        scale: 0.96,
-        filter: 'blur(10px)'
+        x: 42,
+        scale: 0.985,
+        filter: 'blur(6px)'
     }
 }
 
@@ -196,7 +196,7 @@ const ServicesShowcase = ({
                 >
                     <div className="services-showcase__layout">
                         <div className="services-showcase__content">
-                            <AnimatePresence mode="wait">
+                            <AnimatePresence mode="sync" initial={false}>
                                 <motion.div
                                     key={currentSlide.slug}
                                     className="services-showcase__content-inner"
@@ -204,7 +204,7 @@ const ServicesShowcase = ({
                                     initial={direction > 0 ? 'enterRight' : 'enterLeft'}
                                     animate="center"
                                     exit={direction > 0 ? 'exitLeft' : 'exitRight'}
-                                    transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+                                    transition={{ duration: 0.34, ease: [0.22, 1, 0.36, 1] }}
                                 >
                                     <div className="services-showcase__index">
                                         <span className="services-showcase__index-line" />
@@ -246,7 +246,7 @@ const ServicesShowcase = ({
                         </div>
 
                         <div className="services-showcase__media">
-                            <AnimatePresence mode="wait">
+                            <AnimatePresence mode="sync" initial={false}>
                                 <motion.div
                                     key={currentSlide.slug}
                                     className="services-showcase__media-frame"
@@ -254,7 +254,7 @@ const ServicesShowcase = ({
                                     initial={direction > 0 ? 'enterRight' : 'enterLeft'}
                                     animate="center"
                                     exit={direction > 0 ? 'exitLeft' : 'exitRight'}
-                                    transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+                                    transition={{ duration: 0.38, ease: [0.22, 1, 0.36, 1] }}
                                 >
                                     <span className="services-showcase__corner services-showcase__corner--top-left" />
                                     <span className="services-showcase__corner services-showcase__corner--bottom-right" />

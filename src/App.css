@@ -975,6 +975,7 @@ section {
 .services-showcase__content-inner {
     width: 100%;
     max-width: 660px;
+    will-change: transform, opacity, filter;
 }
 
 .services-showcase__index {
@@ -1083,6 +1084,7 @@ section {
     width: 100%;
     max-width: 560px;
     margin-left: auto;
+    will-change: transform, opacity, filter;
 }
 
 .services-showcase__media-card {
@@ -3710,7 +3712,7 @@ section {
     }
 
     .navbar-backdrop-box {
-        inset: 6px 8px;
+        inset: 0px;
         border-radius: 20px;
     }
 
@@ -3872,6 +3874,7 @@ section {
     .projects-phone__card {
         margin: 68px 12px 12px;
         padding: 16px 14px;
+        border-radius: 20px;
     }
 
     .projects-phone__section-label {
@@ -4029,14 +4032,22 @@ section {
     .nav-pill-container,
     .nav-toggle__line,
     .launch-button,
-    .iterdx-contact-preview__btn {
+    .iterdx-contact-preview__btn,
+    .services-showcase__content-inner,
+    .services-showcase__media-frame,
+    .services-showcase__arrow,
+    .services-showcase__cta,
+    .services-showcase__tab-title,
+    .services-showcase__tab-progress-fill {
         transition: none;
     }
 
     .iterdx-services__card:hover .iterdx-services__image,
     .iterdx-services__card:hover .iterdx-services__link-icon,
     .launch-button:hover,
-    .iterdx-contact-preview__btn:hover {
+    .iterdx-contact-preview__btn:hover,
+    .services-showcase__cta:hover,
+    .services-showcase__arrow:hover {
         transform: none;
     }
 }
