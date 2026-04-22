@@ -9,8 +9,8 @@ import ServiceDetails from './pages/ServiceDetails'
 import Projects from './pages/Projects'
 import Contact from './pages/Contact'
 import Footer from './components/Footer'
+import Navbar from './components/Navbar'
 import Loader from './components/Loader'
-import Navbar from "./components/Navbar.jsx";
 
 const ScrollToTop = () => {
     const { pathname } = useLocation()
@@ -53,6 +53,14 @@ function App() {
         }, 1800)
 
         return () => window.clearTimeout(timer)
+    }, [])
+
+    useEffect(() => {
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.getRegistrations().then((registrations) => {
+                registrations.forEach((registration) => registration.unregister())
+            })
+        }
     }, [])
 
     return (
