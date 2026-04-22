@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import logo from '../assets/logo.png'
@@ -9,23 +9,35 @@ const Navbar = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
     const [isMobile, setIsMobile] = useState(false)
 
-    const tabs = [
-        { name: 'Home', path: '/' },
-        { name: 'About', path: '/about' },
-        { name: 'Services', path: '/services' },
-        { name: 'Projects', path: '/projects' },
-        { name: 'Contact', path: '/contact' }
-    ]
+    const tabs = useMemo(
+        () => [
+            { name: 'Home', path: '/' },
+            { name: 'About', path: '/about' },
+            { name: 'Services', path: '/services' },
+            { name: 'Projects', path: '/projects' },
+            { name: 'Contact', path: '/contact' }
+        ],
+        []
+    )
 
-    const activeIndex = tabs.findIndex((tab) => tab.path === location.pathname)
+    const isTabActive = (path) => {
+        if (path === '/') {
+            return location.pathname === '/'
+        }
+        return location.pathname === path || location.pathname.startsWith(`${path}/`)
+    }
+
+    const activeIndex = tabs.findIndex((tab) => isTabActive(tab.path))
 
     useEffect(() => {
         setIsMobileMenuOpen(false)
     }, [location.pathname])
 
     useEffect(() => {
-        const handleResize = () => {
-            const mobile = window.innerWidth <= 768
+        const mediaQuery = window.matchMedia('(max-width: 768px)')
+
+        const updateMobileState = (event) => {
+            const mobile = event.matches
             setIsMobile(mobile)
 
             if (!mobile) {
@@ -33,10 +45,21 @@ const Navbar = () => {
             }
         }
 
-        handleResize()
-        window.addEventListener('resize', handleResize)
+        setIsMobile(mediaQuery.matches)
 
-        return () => window.removeEventListener('resize', handleResize)
+        if (mediaQuery.addEventListener) {
+            mediaQuery.addEventListener('change', updateMobileState)
+        } else {
+            mediaQuery.addListener(updateMobileState)
+        }
+
+        return () => {
+            if (mediaQuery.removeEventListener) {
+                mediaQuery.removeEventListener('change', updateMobileState)
+            } else {
+                mediaQuery.removeListener(updateMobileState)
+            }
+        }
     }, [])
 
     useEffect(() => {
@@ -58,6 +81,34 @@ const Navbar = () => {
                 </Link>
             </div>
 
+            <div className={`nav-pill-container ${isMobileMenuOpen ? 'is-open' : ''}`}>
+                <div className="nav-pill">
+                    {activeIndex !== -1 && (
+                        <motion.div
+                            className="active-pill-bg"
+                            initial={false}
+                            animate={
+                                isMobile
+                                    ? { x: 0, y: activeIndex * 40 }
+                                    : { x: `calc(${activeIndex} * var(--pill-item-width))`, y: 0 }
+                            }
+                            transition={{ type: 'spring', stiffness: 400, damping: 35 }}
+                        />
+                    )}
+
+                    {tabs.map((tab) => (
+                        <Link
+                            key={tab.name}
+                            to={tab.path}
+                            className={`nav-item ${isTabActive(tab.path) ? 'is-active' : ''}`}
+                            onClick={() => setIsMobileMenuOpen(false)}
+                        >
+                            <span>{tab.name}</span>
+                        </Link>
+                    ))}
+                </div>
+            </div>
+
             <button
                 type="button"
                 className={`nav-toggle ${isMobileMenuOpen ? 'is-open' : ''}`}
@@ -69,33 +120,6 @@ const Navbar = () => {
                 <span className="nav-toggle__line" />
                 <span className="nav-toggle__line" />
             </button>
-
-            <div className={`nav-pill-container ${isMobileMenuOpen ? 'is-open' : ''}`}>
-                <div className="nav-pill">
-                    {activeIndex !== -1 && (
-                        <motion.div
-                            className="active-pill-bg"
-                            initial={false}
-                            animate={
-                                isMobile
-                                    ? { x: 0, y: `calc(${activeIndex} * 40px)` }
-                                    : { x: `calc(${activeIndex} * var(--pill-item-width))`, y: 0 }
-                            }
-                            transition={{ type: 'spring', stiffness: 400, damping: 35 }}
-                        />
-                    )}
-
-                    {tabs.map((tab) => (
-                        <Link
-                            key={tab.name}
-                            to={tab.path}
-                            className={`nav-item ${location.pathname === tab.path ? 'is-active' : ''}`}
-                        >
-                            <span>{tab.name}</span>
-                        </Link>
-                    ))}
-                </div>
-            </div>
 
             <AnimatePresence>
                 {isMobileMenuOpen && (
