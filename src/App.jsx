@@ -9,8 +9,8 @@ import ServiceDetails from './pages/ServiceDetails'
 import Projects from './pages/Projects'
 import Contact from './pages/Contact'
 import Footer from './components/Footer'
-import Navbar from './components/Navbar'
 import Loader from './components/Loader'
+import Navbar from "./components/Navbar.jsx";
 
 const ScrollToTop = () => {
     const { pathname } = useLocation()
