@@ -11,7 +11,7 @@ const Navbar = () => {
 
     const tabs = useMemo(
         () => [
-            { name: 'Home', path: '/' },
+            { name: 'Homes', path: '/' },
             { name: 'About', path: '/about' },
             { name: 'Services', path: '/services' },
             { name: 'Projects', path: '/projects' },
