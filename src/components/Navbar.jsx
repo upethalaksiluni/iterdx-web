@@ -20,11 +20,13 @@ const Navbar = () => {
         []
     )
 
+    const normalizedPath = location.pathname.replace(/\/+$/, '') || '/'
+
     const isTabActive = (path) => {
         if (path === '/') {
-            return location.pathname === '/'
+            return normalizedPath === '/'
         }
-        return location.pathname === path || location.pathname.startsWith(`${path}/`)
+        return normalizedPath === path || normalizedPath.startsWith(`${path}/`)
     }
 
     const activeIndex = tabs.findIndex((tab) => isTabActive(tab.path))
