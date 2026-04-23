@@ -18,20 +18,25 @@
     align-items: center;
     gap: 18px;
     z-index: 2000;
+    isolation: isolate;
 }
 
-.navbar-backdrop-box {
+.navbar-wrapper::before {
+    content: '';
     position: absolute;
     inset: 0;
     width: 100%;
     height: 100%;
-    border-radius: 0;
-    background: rgba(255, 255, 255, 0.16);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.22);
-    backdrop-filter: blur(18px);
-    -webkit-backdrop-filter: blur(18px);
+    background: rgba(235, 240, 248, 0.42);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.26);
+    backdrop-filter: blur(28px) saturate(140%);
+    -webkit-backdrop-filter: blur(28px) saturate(140%);
     pointer-events: none;
     z-index: 0;
+}
+
+.navbar-backdrop-box {
+    display: none;
 }
 
 .logo-container {
@@ -75,9 +80,11 @@
 }
 
 .nav-pill {
-    background: rgba(255, 255, 255, 0.42);
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.62);
+    background: rgba(255, 255, 255, 0.34);
+    backdrop-filter: blur(22px) saturate(140%);
+    -webkit-backdrop-filter: blur(22px) saturate(140%);
+    border: 1px solid rgba(255, 255, 255, 0.68);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.32);
     padding: 6px;
     border-radius: 100px;
     display: flex;
@@ -151,8 +158,9 @@
     height: 46px;
     border: 1px solid rgba(11, 49, 147, 0.14);
     border-radius: 14px;
-    background: rgba(255, 255, 255, 0.82);
-    backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.58);
+    backdrop-filter: blur(18px) saturate(140%);
+    -webkit-backdrop-filter: blur(18px) saturate(140%);
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -1054,6 +1062,7 @@ section {
     cursor: pointer;
     font-size: 1.32rem;
     backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -1394,6 +1403,7 @@ section {
     border-radius: 999px;
     background: rgba(255, 255, 255, 0.14);
     backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     font-size: 11px;
     font-weight: 700;
     letter-spacing: 0.08em;
@@ -1928,6 +1938,7 @@ section {
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .projects-phone__logo {
@@ -2129,6 +2140,7 @@ section {
     border-radius: 34px;
     background: rgba(255, 255, 255, 0.54);
     backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     box-shadow: 0 28px 60px rgba(11, 49, 147, 0.14);
     transform: rotate(-7deg);
 }
@@ -2646,9 +2658,12 @@ section {
         overflow: visible;
     }
 
+    .navbar-wrapper::before {
+        background: rgba(235, 240, 248, 0.58);
+    }
+
     .navbar-backdrop-box {
-        inset: 0;
-        border-radius: 0;
+        display: none;
     }
 
     .logo-container {
@@ -2692,7 +2707,7 @@ section {
         padding: 8px;
         flex-direction: column;
         align-items: stretch;
-        background: rgba(255, 255, 255, 0.95);
+        background: rgba(255, 255, 255, 0.8);
         border: 1px solid rgba(11, 49, 147, 0.1);
         box-shadow: 0 20px 40px rgba(15, 23, 42, 0.12);
         overflow: hidden;
@@ -2744,6 +2759,8 @@ section {
         inset: 0;
         top: var(--nav-mobile-height);
         background: rgba(15, 23, 42, 0.08);
+        backdrop-filter: blur(6px);
+        -webkit-backdrop-filter: blur(6px);
         z-index: 2001;
     }
 
@@ -3401,8 +3418,8 @@ section {
         padding-right: 10px;
     }
 
-    .navbar-backdrop-box {
-        inset: 0;
+    .navbar-wrapper::before {
+        background: rgba(235, 240, 248, 0.62);
     }
 
     .brand-link {
@@ -3718,9 +3735,8 @@ section {
         gap: 8px;
     }
 
-    .navbar-backdrop-box {
-        inset: 0;
-        border-radius: 0;
+    .navbar-wrapper::before {
+        background: rgba(235, 240, 248, 0.68);
     }
 
     .brand-wordmark-img {
