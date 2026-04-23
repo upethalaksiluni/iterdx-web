@@ -74,8 +74,6 @@ const Navbar = () => {
 
     return (
         <nav className={`navbar-wrapper ${isMobileMenuOpen ? 'is-mobile-open' : ''}`} aria-label="Primary navigation">
-            <div className="navbar-backdrop-box" aria-hidden="true" />
-
             <div className="logo-container">
                 <Link to="/" className="brand-link" aria-label="IterDX Global home">
                     <img src={logo} alt="IterDX Global logo" className="logo-img" />
