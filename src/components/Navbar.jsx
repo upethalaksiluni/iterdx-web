@@ -11,7 +11,7 @@ const Navbar = () => {
 
     const tabs = useMemo(
         () => [
-            { name: 'Homes', path: '/' },
+            { name: 'Home', path: '/' },
             { name: 'About', path: '/about' },
             { name: 'Services', path: '/services' },
             { name: 'Projects', path: '/projects' },
@@ -73,7 +73,7 @@ const Navbar = () => {
     }, [isMobileMenuOpen])
 
     return (
-        <nav className={`navbar-wrapper ${isMobileMenuOpen ? 'is-mobile-open' : ''}`}>
+        <nav className={`navbar-wrapper ${isMobileMenuOpen ? 'is-mobile-open' : ''}`} aria-label="Primary navigation">
             <div className="navbar-backdrop-box" aria-hidden="true" />
 
             <div className="logo-container">
@@ -109,6 +109,12 @@ const Navbar = () => {
                         </Link>
                     ))}
                 </div>
+            </div>
+
+            <div className="inquiry-btn-container">
+                <Link to="/contact" className="inquiry-btn">
+                    Book a Strategy Call
+                </Link>
             </div>
 
             <button

@@ -5,9 +5,9 @@ const servicesData = [
         title: 'The Virtual Employee',
         subtitle: 'AI Workflow Automation',
         shortDescription:
-            'A custom-integrated AI operative that automates back-office operations, repetitive communication, and customer interactions with structured workflows.',
+            'A custom AI workflow layer that automates back-office operations, repetitive communication, and customer interactions with structured business rules.',
         detailDescription:
-            'A specialized AI workflow layer that operates around the clock to manage recurring business tasks, support responses, and internal routing with speed and consistency.',
+            'Deploy an always-on operational layer that handles recurring business tasks, support workflows, and internal routing with consistency, speed, and stronger execution control.',
         imageUrl:
             'https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1200&q=80',
         steps: [
@@ -15,19 +15,19 @@ const servicesData = [
                 step: 'Step 1',
                 title: 'Process Logic Mapping',
                 content:
-                    'We audit repetitive operational tasks, define automation triggers, and identify the best workflow opportunities across sales, service, and admin.'
+                    'We audit repetitive operational tasks, define automation triggers, and identify the workflow opportunities with the highest measurable return.'
             },
             {
                 step: 'Step 2',
                 title: 'API Bridge Construction',
                 content:
-                    'We connect your communication and productivity tools, allowing the system to move information securely between email, WhatsApp, forms, and dashboards.'
+                    'We connect your communication and productivity tools so information can move securely between email, WhatsApp, forms, and dashboards.'
             },
             {
                 step: 'Step 3',
                 title: 'Knowledge Training',
                 content:
-                    'We structure your FAQs, policies, pricing, and service rules so the assistant can respond with consistent business-aware answers.'
+                    'We structure your FAQs, policies, pricing, and service logic so the assistant can respond with business-aware consistency.'
             },
             {
                 step: 'Step 4',
@@ -43,9 +43,9 @@ const servicesData = [
         title: 'The Business Check-Up',
         subtitle: 'Digital Diagnostic Audit',
         shortDescription:
-            'A strategic technology audit that surfaces operational bottlenecks, wasted tooling, hidden costs, and digital risks across your business.',
+            'A strategic technology audit that reveals operational bottlenecks, wasted tooling, hidden costs, and digital risks across your business.',
         detailDescription:
-            'A comprehensive diagnostic review of your systems, workflows, and tools to expose friction points and produce a focused roadmap for digital improvement.',
+            'Get a clear, decision-ready diagnosis of your systems, workflows, and tools so leadership can prioritize the right digital improvements with confidence.',
         imageUrl:
             'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80',
         steps: [
@@ -53,7 +53,7 @@ const servicesData = [
                 step: 'Step 1',
                 title: 'System Intake',
                 content:
-                    'We document your current software stack, handoff patterns, recurring tasks, and reporting flows to understand how work is actually happening.'
+                    'We document your current software stack, handoff patterns, recurring tasks, and reporting flows to understand how work actually happens.'
             },
             {
                 step: 'Step 2',
@@ -71,7 +71,7 @@ const servicesData = [
                 step: 'Step 4',
                 title: 'Leadership Briefing',
                 content:
-                    'We translate the findings into clear business language so leadership can make confident technology decisions without technical guesswork.'
+                    'We translate the findings into clear business language so leadership can make better technology decisions without technical guesswork.'
             }
         ]
     },
@@ -83,7 +83,7 @@ const servicesData = [
         shortDescription:
             'Security hardening for growing teams, including access reviews, MFA enforcement, credential management, encrypted storage, and backup resilience.',
         detailDescription:
-            'A practical security foundation that protects access, secures credentials, and keeps your critical business data recoverable in the event of failure or attack.',
+            'Strengthen your security baseline with practical controls that protect access, secure credentials, and keep critical business data recoverable in the event of failure or attack.',
         imageUrl:
             'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80',
         steps: [
@@ -109,7 +109,7 @@ const servicesData = [
                 step: 'Step 4',
                 title: 'Recovery Validation',
                 content:
-                    'We simulate restoration scenarios to confirm that business-critical data can be restored quickly and accurately when needed.'
+                    'We test restoration scenarios to confirm that business-critical data can be restored quickly and accurately when needed.'
             }
         ]
     },
@@ -121,7 +121,7 @@ const servicesData = [
         shortDescription:
             'A unified reporting experience that transforms fragmented business data into live dashboards, KPI visibility, and mobile-ready performance views.',
         detailDescription:
-            'A decision dashboard that consolidates operational data into clear visuals, giving leadership instant access to business performance, movement, and opportunity.',
+            'Turn disconnected numbers into live operational clarity with dashboards, scorecards, and decision-ready reporting that leadership can understand instantly.',
         imageUrl:
             'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80',
         steps: [
@@ -135,7 +135,7 @@ const servicesData = [
                 step: 'Step 2',
                 title: 'Visualization Layer',
                 content:
-                    'We design a branded dashboard experience with focused charts, scorecards, and trend indicators that leadership can understand instantly.'
+                    'We design a branded dashboard experience with focused charts, scorecards, and trend indicators that leadership can read in seconds.'
             },
             {
                 step: 'Step 3',
@@ -159,7 +159,7 @@ const servicesData = [
         shortDescription:
             'A private learning platform for educators and institutions to host, protect, manage, and deliver premium course content at scale.',
         detailDescription:
-            'A secure digital learning environment that allows educators to distribute lessons, manage learners, and protect intellectual property across video and downloadable content.',
+            'Launch a secure digital learning environment that protects premium content, streamlines enrollment, and gives educators full control over delivery and operations.',
         imageUrl:
             'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80',
         steps: [
@@ -195,9 +195,9 @@ const servicesData = [
         title: 'The Scale Engine',
         subtitle: 'Integrated Digital Transformation',
         shortDescription:
-            'A full-stack digital transformation engagement that combines automation, security, reporting, and systems design into a unified business operating model.',
+            'A full-stack transformation engagement that combines automation, security, reporting, and systems design into a unified operating model.',
         detailDescription:
-            'A structured multi-phase transformation program that modernizes the way your business works, secures its operations, and prepares it for scale.',
+            'Modernize the way your business works with a structured multi-phase transformation program that stabilizes operations, strengthens resilience, and prepares the organization for scale.',
         imageUrl:
             'https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80',
         steps: [

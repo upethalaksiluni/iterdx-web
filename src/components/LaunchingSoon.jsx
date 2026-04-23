@@ -19,7 +19,7 @@ const LaunchingSoon = () => {
                 <motion.div className="launch-card" {...launchReveal}>
                     <div className="launch-badge">
                         <span className="launch-badge__icon">✦</span>
-                        <span>Upcoming Projects</span>
+                        <span>Upcoming Launch</span>
                     </div>
 
                     <h2 className="launch-title">Launching Soon</h2>
@@ -29,7 +29,7 @@ const LaunchingSoon = () => {
                     </div>
 
                     <p className="launch-description">
-                        Be among the first to experience our next digital launch. Reserve your interest before the timer runs out.
+                        Explore what IterDX Global is building next and see how our product work translates strategy into launch-ready digital experiences.
                     </p>
 
                     <div className="launch-countdown" aria-label="Launch countdown preview">

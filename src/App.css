@@ -22,8 +22,12 @@
 
 .navbar-backdrop-box {
     position: absolute;
-    inset: 0px var(--side-gutter);
-    border-radius: 28px;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    background: rgba(255, 255, 255, 0.16);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.22);
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
     pointer-events: none;
@@ -117,6 +121,7 @@
 .inquiry-btn-container {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     position: relative;
     z-index: 2003;
 }
@@ -268,6 +273,7 @@ section {
     padding: 58px 32px 52px;
     border-radius: 30px;
     border: 1px solid rgba(183, 173, 153, 0.3);
+    background: rgba(255, 255, 255, 0.42);
     box-shadow: 0 10px 24px rgba(99, 90, 73, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.42);
     text-align: center;
 }
@@ -395,6 +401,7 @@ section {
     font-size: 0.96rem;
     font-weight: 700;
     cursor: pointer;
+    text-decoration: none;
     transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease;
 }
 
@@ -923,7 +930,8 @@ section {
     letter-spacing: 1px;
 }
 
-.footer-col a {
+.footer-col a,
+.footer-col-link-static {
     display: block;
     text-decoration: none;
     color: var(--text-muted);
@@ -1538,6 +1546,7 @@ section {
     font-size: 0.9rem;
     font-weight: 500;
     white-space: nowrap;
+    text-decoration: none;
 }
 
 .contact-hero__meta-icon {
@@ -1760,7 +1769,6 @@ section {
 
 .projects-hero__title {
     margin: 0;
-    font-family: var(--font-display);
     font-size: clamp(3rem, 6.2vw, 5.8rem);
     line-height: 0.95;
     font-weight: 600;
@@ -1925,15 +1933,14 @@ section {
 .projects-phone__logo {
     margin-bottom: 24px;
     color: rgba(250, 244, 232, 0.96);
-    font-family: var(--font-display);
     font-size: 1.7rem;
     line-height: 1;
+    font-weight: 700;
 }
 
 .projects-phone__title {
     margin: 0;
     color: #f9f4e8;
-    font-family: var(--font-display);
     font-size: clamp(1.85rem, 2.8vw, 2.8rem);
     line-height: 1;
     font-weight: 600;
@@ -2640,8 +2647,8 @@ section {
     }
 
     .navbar-backdrop-box {
-        inset: 8px 12px;
-        border-radius: 24px;
+        inset: 0;
+        border-radius: 0;
     }
 
     .logo-container {
@@ -3395,7 +3402,7 @@ section {
     }
 
     .navbar-backdrop-box {
-        inset: 8px 10px;
+        inset: 0;
     }
 
     .brand-link {
@@ -3712,8 +3719,8 @@ section {
     }
 
     .navbar-backdrop-box {
-        inset: 0px;
-        border-radius: 20px;
+        inset: 0;
+        border-radius: 0;
     }
 
     .brand-wordmark-img {
@@ -3836,7 +3843,8 @@ section {
         margin-bottom: 18px;
     }
 
-    .footer-col a {
+    .footer-col a,
+    .footer-col-link-static {
         margin-bottom: 12px;
         font-size: 0.88rem;
     }
@@ -4038,7 +4046,11 @@ section {
     .services-showcase__arrow,
     .services-showcase__cta,
     .services-showcase__tab-title,
-    .services-showcase__tab-progress-fill {
+    .services-showcase__tab-progress-fill,
+    .inquiry-btn,
+    .contact-form__submit,
+    .projects-hero__cta,
+    .home-about-preview__cta {
         transition: none;
     }
 
@@ -4047,7 +4059,15 @@ section {
     .launch-button:hover,
     .iterdx-contact-preview__btn:hover,
     .services-showcase__cta:hover,
-    .services-showcase__arrow:hover {
+    .services-showcase__arrow:hover,
+    .inquiry-btn:hover,
+    .contact-form__submit:hover,
+    .projects-hero__cta:hover,
+    .home-about-preview__cta:hover {
         transform: none;
+    }
+
+    .iterdx-shining-text {
+        animation: none;
     }
 }

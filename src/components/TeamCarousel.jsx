@@ -79,7 +79,7 @@ function TeamCarousel() {
     useEffect(() => {
         autoplayRef.current = window.setInterval(() => {
             setActiveIndex((previous) => (previous + 1) % teamMembers.length)
-        }, 2800)
+        }, 3200)
 
         return () => {
             if (autoplayRef.current) {
@@ -129,7 +129,7 @@ function TeamCarousel() {
                     <span className="team-section__eyebrow">PEOPLE</span>
                     <h2 className="team-section__title">Team</h2>
                     <p className="team-section__description">
-                        The IterDX team brings together strategy, engineering, design, operations, and delivery to build stable systems for the AI era.
+                        Our team blends strategy, systems thinking, engineering, design, and delivery to help businesses execute transformation with clarity and confidence.
                     </p>
                 </div>
 

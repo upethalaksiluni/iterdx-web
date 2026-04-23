@@ -16,10 +16,21 @@ const ScrollToTop = () => {
     const { pathname } = useLocation()
 
     useEffect(() => {
-        window.scrollTo(0, 0)
+        window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
     }, [pathname])
 
     return null
+}
+
+const NotFound = () => {
+    return (
+        <section className="simple-page">
+            <div className="simple-page-inner">
+                <h1>Page not found</h1>
+                <p>The page you are looking for does not exist.</p>
+            </div>
+        </section>
+    )
 }
 
 function AppShell() {
@@ -36,6 +47,7 @@ function AppShell() {
                         <Route path="/services/:slug" element={<ServiceDetails />} />
                         <Route path="/projects" element={<Projects />} />
                         <Route path="/contact" element={<Contact />} />
+                        <Route path="*" element={<NotFound />} />
                     </Routes>
                 </main>
                 <Footer />
@@ -50,7 +62,7 @@ function App() {
     useEffect(() => {
         const timer = window.setTimeout(() => {
             setIsLoading(false)
-        }, 1800)
+        }, 1200)
 
         return () => window.clearTimeout(timer)
     }, [])

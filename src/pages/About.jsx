@@ -2,6 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import aboutVisionImage from '../assets/about-vision.avif'
 import TeamCarousel from '../components/TeamCarousel'
+import PageSeo from '../components/PageSeo.jsx'
 
 const heroReveal = {
     initial: { opacity: 0, y: 28, filter: 'blur(12px)' },
@@ -47,6 +48,12 @@ const aboutBottomImage =
 const About = () => {
     return (
         <section className="about-page">
+            <PageSeo
+                title="About IterDX Global | Strategy, Systems & AI-Era Execution"
+                description="Learn how IterDX Global helps businesses navigate digital transformation through automation, security, product engineering, and implementation-ready systems."
+                path="/about"
+            />
+
             <div className="about-hero">
                 <div className="about-hero__shell">
                     <motion.div className="about-hero__inner" {...heroReveal}>
@@ -55,9 +62,9 @@ const About = () => {
                             <div className="about-hero__copy">
                                 <span className="about-hero__eyebrow">IDENTITY</span>
                                 <h1 className="about-hero__title">
-                                    IterDX is a strategic bridge to the AI era.
-                                    We transform legacy systems into stabilized,
-                                    high-performance digital operations.
+                                    IterDX Global is a strategic bridge to the AI era.
+                                    We help businesses turn legacy workflows into
+                                    stable, scalable, high-performance digital operations.
                                 </h1>
                             </div>
 
@@ -73,12 +80,12 @@ const About = () => {
                 <div className="about-shell">
                     <div className="about-grid about-grid--content-image about-grid--top-aligned">
                         <motion.div className="about-copy wide" {...leftReveal}>
-                            <h2 className="about-heading">Why IterDX: Navigating the Shift</h2>
+                            <h2 className="about-heading">Why businesses work with IterDX</h2>
                             <p className="about-paragraph">
-                                We work with businesses that know change is necessary but need a clear way forward. Our role is to simplify digital transformation into practical, structured action through automation, security, reporting, and system design.
+                                Many organizations know change is necessary, but they do not need abstract advice. They need a clear path, a stable system, and a partner who can move from strategy into implementation.
                             </p>
                             <p className="about-paragraph">
-                                Instead of generic advice, we create implementation-ready frameworks that help teams reduce waste, improve decision-making, and operate with more certainty.
+                                IterDX simplifies digital transformation into structured, practical action across automation, security, reporting, product systems, and operational design.
                             </p>
                         </motion.div>
 
@@ -97,12 +104,12 @@ const About = () => {
                         </motion.div>
 
                         <motion.div className="about-copy" {...rightReveal}>
-                            <h2 className="about-heading">Who We Are: Building the Future</h2>
+                            <h2 className="about-heading">From strategy to implementation</h2>
                             <p className="about-paragraph">
-                                We combine consultancy thinking with hands-on product execution. That means we do not stop at recommendations. We design, refine, and implement the systems that power better operations.
+                                We combine consultancy thinking with hands-on product execution. That means we do not stop at recommendations. We design, refine, and implement the systems that improve how work gets done.
                             </p>
                             <p className="about-paragraph">
-                                From front-end experience to digital infrastructure, our work is shaped around long-term resilience, stronger business foundations, and scalable growth.
+                                From front-end experience to digital infrastructure, our work is built around resilience, operational clarity, and sustainable growth.
                             </p>
                         </motion.div>
                     </div>

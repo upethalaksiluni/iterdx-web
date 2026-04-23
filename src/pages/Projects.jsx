@@ -1,6 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import projectBg from '../assets/projects-bg.jpeg'
+import PageSeo from '../components/PageSeo.jsx'
 
 const fadeLeft = {
     initial: { opacity: 0, x: -70, filter: 'blur(12px)' },
@@ -23,6 +24,12 @@ const cardReveal = {
 const Projects = () => {
     return (
         <section className="projects-page">
+            <PageSeo
+                title="Projects | IterDX Global"
+                description="See how IterDX Global turns strategy into real-world digital products, launch systems, and customer-facing experiences."
+                path="/projects"
+            />
+
             <div className="projects-hero">
                 <div
                     className="projects-hero__bg"
@@ -40,25 +47,22 @@ const Projects = () => {
                         <div className="projects-hero__brand">Featured Project</div>
 
                         <h1 className="projects-hero__title">
-                            Disaster survivors
+                            Digital products should
                             <br />
-                            deserve a clear path
+                            move people forward,
                             <br />
-                            home.
+                            not slow them down.
                         </h1>
 
                         <p className="projects-hero__description">
-                            Bright Harbor combines experienced disaster recovery advisors
-                            with powerful technology, so survivors find more money, move
-                            faster, and rebuild with confidence.
+                            IterDX Global builds product experiences that turn strategy into execution. From platform structure to interface delivery, our projects are designed to create clarity, trust, and measurable action.
                         </p>
 
                         <a
-                            href="#"
+                            href="/contact"
                             className="projects-hero__cta"
-                            onClick={(event) => event.preventDefault()}
                         >
-                            Book a Consultation
+                            Start a Project
                         </a>
                     </motion.div>
 
@@ -96,31 +100,27 @@ const Projects = () => {
                                         <div className="projects-phone__logo">BrightHarbor</div>
 
                                         <h2 className="projects-phone__title">
-                                            Your path home
+                                            Recovery support,
                                             <br />
-                                            starts here.
+                                            simplified.
                                         </h2>
 
                                         <p className="projects-phone__text">
-                                            Bright Harbor empowers your recovery with expert guidance,
-                                            situational clarity, comprehensive assessments of your
-                                            funding opportunities and personalized support on your
-                                            rebuild journey.
+                                            A clear example of how thoughtful product design can turn a stressful, fragmented process into a guided digital journey with real-world utility.
                                         </p>
 
                                         <div className="projects-phone__section-label">
                                             <span />
-                                            <strong>How We Help</strong>
+                                            <strong>How It Helps</strong>
                                             <span />
                                         </div>
 
                                         <div className="projects-phone__feature">
                                             <div className="projects-phone__feature-icon">✧</div>
                                             <div>
-                                                <h3>Understand your options</h3>
+                                                <h3>Clearer next steps</h3>
                                                 <p>
-                                                    Clear guidance on insurance, rebuilding,
-                                                    and recovery decisions.
+                                                    Users understand their options faster and move through decisions with less friction.
                                                 </p>
                                             </div>
                                         </div>
@@ -128,10 +128,9 @@ const Projects = () => {
                                         <div className="projects-phone__feature">
                                             <div className="projects-phone__feature-icon">✧</div>
                                             <div>
-                                                <h3>Move recovery forward</h3>
+                                                <h3>Stronger execution flow</h3>
                                                 <p>
-                                                    Connect with trusted vendors and
-                                                    create a path forward.
+                                                    Structured experiences improve trust, action rates, and operational consistency.
                                                 </p>
                                             </div>
                                         </div>

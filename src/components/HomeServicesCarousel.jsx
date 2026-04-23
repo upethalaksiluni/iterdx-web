@@ -12,8 +12,8 @@ const defaultItems = servicesData.map((service) => ({
 }))
 
 function HomeServicesCarousel({
-                                  title = 'Services',
-                                  description = 'We design digital systems that improve execution, strengthen security, and create the operational clarity needed for modern growth.',
+                                  title = 'Solutions built for measurable business outcomes',
+                                  description = 'From automation and security to reporting and full digital transformation, IterDX Global builds the systems that help teams move faster and operate with more control.',
                                   items = defaultItems
                               }) {
     const totalSlides = items.length
@@ -40,7 +40,7 @@ function HomeServicesCarousel({
 
         autoplayRef.current = window.setInterval(() => {
             setActiveIndex((previous) => (previous + 1) % totalSlides)
-        }, 2600)
+        }, 3200)
 
         return () => {
             if (autoplayRef.current) {
@@ -92,7 +92,7 @@ function HomeServicesCarousel({
         <section className="iterdx-services" aria-label="Services section">
             <div className="page-shell">
                 <div className="iterdx-services__header">
-                    <span className="iterdx-services__eyebrow">WHAT WE DO</span>
+                    <span className="iterdx-services__eyebrow">WHAT WE BUILD</span>
                     <h2 className="iterdx-services__title">{title}</h2>
                     <p className="iterdx-services__description">{description}</p>
                 </div>

@@ -3,6 +3,7 @@ import { Link, useParams } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import servicesData from '../data/servicesData'
 import ContactPreview from '../components/ContactPreview.jsx'
+import PageSeo from '../components/PageSeo.jsx'
 
 function ServiceDetails() {
     const { slug } = useParams()
@@ -45,6 +46,11 @@ function ServiceDetails() {
     if (!service) {
         return (
             <section className="service-details-page" aria-label="Service not found">
+                <PageSeo
+                    title="Service Not Found | IterDX Global"
+                    description="The requested service could not be found."
+                    path="/services"
+                />
                 <div className="page-shell">
                     <div className="service-details-header">
                         <span className="service-details-eyebrow">Service details</span>
@@ -66,6 +72,12 @@ function ServiceDetails() {
 
     return (
         <>
+            <PageSeo
+                title={`${service.title} | IterDX Global`}
+                description={service.detailDescription}
+                path={`/services/${service.slug}`}
+            />
+
             <section className="service-details-page" aria-label="Service details page">
                 <div className="page-shell">
                     <motion.div

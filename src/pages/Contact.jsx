@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import logo from '../assets/logo.png'
+import PageSeo from '../components/PageSeo.jsx'
 
 const contactVisual =
     'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80'
@@ -27,8 +28,39 @@ const fadeRight = {
 }
 
 const Contact = () => {
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        message: ''
+    })
+
+    const handleChange = (event) => {
+        const { name, value } = event.target
+        setFormData((previous) => ({
+            ...previous,
+            [name]: value
+        }))
+    }
+
+    const handleSubmit = (event) => {
+        event.preventDefault()
+
+        const subject = encodeURIComponent(`New inquiry from ${formData.name || 'Website visitor'}`)
+        const body = encodeURIComponent(
+            `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+        )
+
+        window.location.href = `mailto:hello@iterdxglobal.com?subject=${subject}&body=${body}`
+    }
+
     return (
         <section className="contact-page">
+            <PageSeo
+                title="Contact IterDX Global | Book a Strategy Call"
+                description="Get in touch with IterDX Global to discuss automation, digital transformation, cybersecurity, business intelligence, or product engineering."
+                path="/contact"
+            />
+
             <div className="contact-shell">
                 <div className="contact-hero">
                     <motion.div className="contact-hero__content" {...fadeLeft}>
@@ -40,12 +72,12 @@ const Contact = () => {
                             </div>
                         </div>
 
-                        <h1 className="contact-hero__title">Transform Your Future in the AI Era.</h1>
+                        <h1 className="contact-hero__title">Book the conversation that moves your business forward.</h1>
 
                         <span className="contact-hero__divider" />
 
                         <p className="contact-hero__description">
-                            Build stronger digital foundations with a team that understands execution, design quality, and scalable front-end delivery. From consultation to implementation, we help you move with clarity.
+                            Whether you need workflow automation, stronger security, better reporting, or a clearer digital roadmap, we can help you define the next practical step.
                         </p>
 
                         <button
@@ -58,20 +90,20 @@ const Contact = () => {
                                 }
                             }}
                         >
-                            JOIN THE SHIFT
+                            START THE CONVERSATION
                         </button>
 
                         <div className="contact-hero__meta">
-                            <div className="contact-hero__meta-item">
-                                <span className="contact-hero__meta-icon">â—‰</span>
+                            <a href="https://iterdxglobal.com" className="contact-hero__meta-item" target="_blank" rel="noopener noreferrer">
+                                <span className="contact-hero__meta-icon">◉</span>
                                 <span>iterdxglobal.com</span>
-                            </div>
-                            <div className="contact-hero__meta-item">
-                                <span className="contact-hero__meta-icon">â—”</span>
+                            </a>
+                            <a href="tel:+94700000000" className="contact-hero__meta-item">
+                                <span className="contact-hero__meta-icon">◔</span>
                                 <span>+94 70 000 0000</span>
-                            </div>
+                            </a>
                             <div className="contact-hero__meta-item">
-                                <span className="contact-hero__meta-icon">â—Ž</span>
+                                <span className="contact-hero__meta-icon">⌖</span>
                                 <span>Colombo, Sri Lanka</span>
                             </div>
                         </div>
@@ -87,15 +119,16 @@ const Contact = () => {
                 <div id="contact-form-section" className="contact-section">
                     <motion.div className="contact-section__info" {...fadeUp}>
                         <div className="contact-section__info-block">
-                            <div className="contact-section__icon">â˜Ž</div>
+                            <div className="contact-section__icon">☎</div>
                             <div>
                                 <h3 className="contact-section__info-title">Call Us</h3>
-                                <p className="contact-section__info-text">+94 70 000 0000, +94 11 000 0000</p>
+                                <p className="contact-section__info-text">+94 70 000 0000</p>
+                                <p className="contact-section__info-text">+94 11 000 0000</p>
                             </div>
                         </div>
 
                         <div className="contact-section__info-block">
-                            <div className="contact-section__icon">âŒ–</div>
+                            <div className="contact-section__icon">⌖</div>
                             <div>
                                 <h3 className="contact-section__info-title">Location</h3>
                                 <p className="contact-section__info-text">IterDX Global, Colombo, Sri Lanka</p>
@@ -103,33 +136,54 @@ const Contact = () => {
                         </div>
 
                         <div className="contact-section__info-block">
-                            <div className="contact-section__icon">â—·</div>
+                            <div className="contact-section__icon">•</div>
                             <div>
                                 <h3 className="contact-section__info-title">Business Hours</h3>
-                                <p className="contact-section__info-text">Mon - Fri 9.00 am - 6.00 pm</p>
-                                <p className="contact-section__info-text">Sat - Sun Closed</p>
+                                <p className="contact-section__info-text">Monday to Friday, 9.00 am to 6.00 pm</p>
+                                <p className="contact-section__info-text">Saturday and Sunday closed</p>
                             </div>
                         </div>
                     </motion.div>
 
                     <motion.div className="contact-section__form-wrap" {...fadeUp}>
-                        <h2 className="contact-section__form-title">Contact Us</h2>
+                        <h2 className="contact-section__form-title">Request a Strategy Call</h2>
 
-                        <form className="contact-form">
+                        <form className="contact-form" onSubmit={handleSubmit}>
                             <div className="contact-form__field">
-                                <input type="text" placeholder="Enter your Name" />
+                                <input
+                                    type="text"
+                                    name="name"
+                                    placeholder="Enter your name"
+                                    value={formData.name}
+                                    onChange={handleChange}
+                                    required
+                                />
                             </div>
 
                             <div className="contact-form__field">
-                                <input type="email" placeholder="Enter a valid email address" />
+                                <input
+                                    type="email"
+                                    name="email"
+                                    placeholder="Enter your email address"
+                                    value={formData.email}
+                                    onChange={handleChange}
+                                    required
+                                />
                             </div>
 
                             <div className="contact-form__field">
-                                <textarea rows="5" placeholder="Enter your message" />
+                                <textarea
+                                    rows="5"
+                                    name="message"
+                                    placeholder="Tell us what you need help with"
+                                    value={formData.message}
+                                    onChange={handleChange}
+                                    required
+                                />
                             </div>
 
                             <button type="submit" className="contact-form__submit">
-                                SUBMIT
+                                SEND INQUIRY
                             </button>
                         </form>
                     </motion.div>

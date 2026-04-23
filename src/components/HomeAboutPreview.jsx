@@ -27,25 +27,25 @@ function HomeAboutPreview() {
                     <div className="home-about-preview__eyebrow">
                         <span className="home-about-preview__eyebrow-index">01</span>
                         <span className="home-about-preview__eyebrow-divider">//</span>
-                        <span className="home-about-preview__eyebrow-label">WHO WE ARE</span>
+                        <span className="home-about-preview__eyebrow-label">WHY ITERDX</span>
                     </div>
 
                     <h2 className="home-about-preview__title">
-                        The Bridge to
+                        Turn fragmented operations into clear,
                         <br />
-                        Stable AI-Led Operations
+                        scalable digital systems
                     </h2>
 
                     <p className="home-about-preview__text">
-                        IterDX is a strategic consultancy and product engineering house. We serve as a professional bridge to the AI era, guiding organizations and individuals from legacy systems to stabilized, high-performance digital operations.
+                        IterDX Global helps businesses move from manual bottlenecks, disconnected tools, and weak operational visibility into streamlined digital execution built for the AI era.
                     </p>
 
                     <p className="home-about-preview__text">
-                        We combine advisory thinking with execution-ready delivery across automation, product systems, reporting, and digital infrastructure so transformation becomes practical, measurable, and sustainable.
+                        We combine strategic consultancy with product engineering to deliver automation, security, intelligence dashboards, and implementation-ready systems that create measurable business momentum.
                     </p>
 
                     <Link to="/about" className="home-about-preview__cta">
-                        Read more
+                        Learn about IterDX
                         <span aria-hidden="true">→</span>
                     </Link>
                 </motion.div>
